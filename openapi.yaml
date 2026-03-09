@@ -467,67 +467,52 @@ components:
           type: string
           description: Final URL after redirects
         title:
-          type: string
-          nullable: true
+          type: ['string', 'null']
         description:
-          type: string
-          nullable: true
+          type: ['string', 'null']
         og:
           type: object
           properties:
             title:
-              type: string
-              nullable: true
+              type: ['string', 'null']
             description:
-              type: string
-              nullable: true
+              type: ['string', 'null']
             image:
-              type: string
-              nullable: true
+              type: ['string', 'null']
             type:
-              type: string
-              nullable: true
+              type: ['string', 'null']
             site_name:
-              type: string
-              nullable: true
+              type: ['string', 'null']
             url:
-              type: string
-              nullable: true
+              type: ['string', 'null']
         twitter:
           type: object
           properties:
             card:
-              type: string
-              nullable: true
+              type: ['string', 'null']
             title:
-              type: string
-              nullable: true
+              type: ['string', 'null']
             description:
-              type: string
-              nullable: true
+              type: ['string', 'null']
             image:
-              type: string
-              nullable: true
+              type: ['string', 'null']
             site:
-              type: string
-              nullable: true
+              type: ['string', 'null']
             creator:
-              type: string
-              nullable: true
+              type: ['string', 'null']
         favicon:
-          type: string
-          nullable: true
+          type: ['string', 'null']
           description: Resolved absolute URL to favicon
         canonical:
-          type: string
-          nullable: true
+          type: ['string', 'null']
         language:
-          type: string
-          nullable: true
+          type: ['string', 'null']
           description: Detected page language
         structured_data:
           type: array
-          items: {}
+          items:
+            type: object
+            additionalProperties: true
           description: Parsed JSON-LD objects
         response_time_ms:
           type: number
